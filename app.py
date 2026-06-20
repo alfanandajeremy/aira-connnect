@@ -1,6 +1,6 @@
 import streamlit as st
 
-CLIENT_ID = "CLIENT_ID_ANDA"
+CLIENT_ID = "494634548519-5ipea5s13rgveneuov867tubbc60qsou.apps.googleusercontent.com"
 
 phone = st.query_params.get("phone", "")
 
