@@ -1,5 +1,27 @@
 import streamlit as st
 
-st.title("AIRA")
+CLIENT_ID = "CLIENT_ID_ANDA"
 
-st.write("Google Calendar Connection")
+phone = st.query_params.get("phone", "")
+
+redirect_uri = "https://connect.airaofficial.my.id"
+
+auth_url = (
+    "https://accounts.google.com/o/oauth2/v2/auth"
+    f"?client_id={CLIENT_ID}"
+    "&response_type=code"
+    "&scope=https://www.googleapis.com/auth/calendar"
+    "&access_type=offline"
+    "&prompt=consent"
+    f"&redirect_uri={redirect_uri}"
+    f"&state={phone}"
+)
+
+st.title("AIRA Google Calendar")
+
+st.write("Hubungkan Google Calendar Anda")
+
+st.link_button(
+    "Connect Google Calendar",
+    auth_url
+)
