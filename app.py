@@ -4,7 +4,7 @@ CLIENT_ID = "494634548519-5ipea5s13rgveneuov867tubbc60qsou.apps.googleuserconten
 
 phone = st.query_params.get("phone", "")
 
-redirect_uri = "https://connect.airaofficial.my.id"
+redirect_uri = "redirect_uri = "https://aira-connnect.streamlit.app"
 
 auth_url = (
     "https://accounts.google.com/o/oauth2/v2/auth"
